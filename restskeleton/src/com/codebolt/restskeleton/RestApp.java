@@ -1,10 +1,11 @@
 package com.codebolt.restskeleton;
 
-import com.codebolt.restskeleton.rest.HelloWorldService;
-
 import io.dropwizard.Application;
+import io.dropwizard.Configuration;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
+
+import com.codebolt.restskeleton.rest.HelloWorldService;
 
 /**
  * The main application class which runs the application and ties the Dropwizard libraries together.
@@ -14,7 +15,7 @@ import io.dropwizard.setup.Environment;
  * @author Rune
  *
  */
-public class RestApp extends Application<RestAppConfiguration> {
+public class RestApp extends Application<Configuration> {
 	
 	@Override
 	public String getName() {
@@ -22,12 +23,12 @@ public class RestApp extends Application<RestAppConfiguration> {
 	}
 
 	@Override
-	public void initialize(Bootstrap<RestAppConfiguration> arg0) { 
+	public void initialize(Bootstrap<Configuration> arg0) { 
 		// nothing to initialize
 	}
 
 	@Override
-	public void run(RestAppConfiguration config, Environment environment)
+	public void run(Configuration config, Environment environment)
 			throws Exception {
 		// register rest service classes here
 		environment.jersey().register(HelloWorldService.class);
