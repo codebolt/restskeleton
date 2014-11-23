@@ -1,5 +1,6 @@
 package com.codebolt.restskeleton.rest;
 
+import javax.validation.constraints.NotNull;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -23,8 +24,8 @@ public class HelloWorldService {
 	}
 	
 	@GET
-	@Path("/name/{name}")
-	public String helloName(@PathParam("name") String name) {
-		return "Hello, " + name + "!" ;
+	@Path("/add/{foo}/{bar}")
+	public Addition addTwoNumbers(@PathParam("foo") @NotNull Long foo, @PathParam("bar") @NotNull Long bar) {
+		return new Addition(foo, bar) ;
 	}
 }
