@@ -6,7 +6,7 @@ A simple REST-service skeleton application based on Dropwizard.
 
 * Download and install Java 8 JDK. 
 * Download the latest Eclipse.
-* In Eclipse, install the m2eclipse and EGit plugins.
+* In Eclipse, install the [m2eclipse](http://eclipse.org/m2e/) and [EGit](http://eclipse.org/egit/) plugins.
 * Check out this project to your Eclipse workspace using EGit.
 * If it's not automatically recognized as a Maven project in Eclipse, you have to right click the project and select Configure->Convert to Maven project
 * Launch this project as a Java Application, using com.codebolt.restskeleton.RestApp as your main class.
